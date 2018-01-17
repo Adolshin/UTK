@@ -47,7 +47,7 @@ body {
 
 .page__header,
 .page__footer {
-  flex: 0;
+  // flex: 0;
   width: 100%;
 }
 
@@ -58,7 +58,7 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-  flex: 1;
+  flex-grow: 1;
   background-color: #fff;
 }
 

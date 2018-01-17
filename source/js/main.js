@@ -1,3 +1,39 @@
+
+//Аккордеон
+var accTeam = function () {
+  $('.catalog__link').click(
+    function (e) {
+      e.preventDefault();
+      if ($(this).parent('.catalog__item').hasClass('catalog__item_active')) {
+        $('.catalog__item').removeClass('catalog__item_active');
+      } else {
+        $('.catalog__item').removeClass('catalog__item_active');
+        $(this).parent('.catalog__item').addClass('catalog__item_active');
+      }
+    });
+};
+accTeam();
+
+//Фидбэк
+$('.header__feedback').click(function (e) {
+  e.preventDefault();
+  // $(this).toggleClass('hamburger-menu_active');
+  $('.overlay').addClass('overlay_active');
+  $('body').addClass('body_block');
+});
+$('.feedback__cross').click(function (e) {
+  e.preventDefault();
+  $('.overlay').removeClass('overlay_active');
+  $('body').removeClass('body_block');
+});
+
+//Выход асайда
+$('.catalog__tab').click(function (e) {
+  e.preventDefault(); 
+  $('.content__left').toggleClass('content__left_active'); 
+  $('.catalog__tab-img').toggleClass('catalog__tab-img_active');   
+  
+});
 //Слайдер
 var slider = function () {
   let list = $('.slider__list'),
@@ -49,38 +85,3 @@ var slider = function () {
   });
 };
 slider();
-//Аккордеон
-var accTeam = function () {
-  $('.catalog__link').click(
-    function (e) {
-      e.preventDefault();
-      if ($(this).parent('.catalog__item').hasClass('catalog__item_active')) {
-        $('.catalog__item').removeClass('catalog__item_active');
-      } else {
-        $('.catalog__item').removeClass('catalog__item_active');
-        $(this).parent('.catalog__item').addClass('catalog__item_active');
-      }
-    });
-};
-accTeam();
-
-//Фидбэк
-$('.header__feedback').click(function (e) {
-  e.preventDefault();
-  // $(this).toggleClass('hamburger-menu_active');
-  $('.overlay').addClass('overlay_active');
-  $('body').addClass('body_block');
-});
-$('.feedback__cross').click(function (e) {
-  e.preventDefault();
-  $('.overlay').removeClass('overlay_active');
-  $('body').removeClass('body_block');
-});
-
-//Выход асайда
-$('.catalog__tab').click(function (e) {
-  e.preventDefault(); 
-  $('.content__left').toggleClass('content__left_active'); 
-  $('.catalog__tab-img').toggleClass('catalog__tab-img_active');   
-  
-});
