@@ -1,0 +1,20 @@
+.overlay
+    .feedback
+        .feedback__title Обратная связь
+        form.feedback__form(action="")
+            .feedback__row
+                label.feedback__label(for="name") Ваше имя *
+                input.feedback__input(type="text" id='name')
+            .feedback__row
+                label.feedback__label(for="phone") Телефон *
+                input.feedback__input(type="text" id='phone')
+            .feedback__row
+                label.feedback__label(for="email") Email *
+                input.feedback__input.feedback__input_mail(type="text" id='email' placeholder='Поле обязательно для заполнения')
+            .feedback__row
+                label.feedback__label(for="textarea") Сообщение
+                textarea.feedback__textarea#textarea
+            button.feedback__button(type='submit') Отправить
+        a.feedback__cross(href="#")
+            img.feedback__cross-pic(src="./assets/img/cross.png", alt="закрыть")
+

@@ -1,0 +1,25 @@
+.pagination {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.pagination__list {
+    display: flex;
+    align-items: flex-end;
+}
+.pagination__item {
+    margin-right: rem(10px);
+    transition: .3s;
+    &:last-child {
+        margin-right: 0;
+    }
+    &.pagination__item_active {
+        font-size: rem(18px);
+    }
+    &:hover {
+        font-size: rem(18px); 
+    }
+}
+.pagination__link {
+    width: rem(15px);
+}
