@@ -1,9 +1,5 @@
-﻿### Прдвинутый курс по Веб-разработке
-#### Школа 'Lofschool', 2017
-**Студент:** Тимур Адольшин.
-**Наставник:** Юрий Кучма.
-
-**Демо**: https://adolshin.github.io/web-advanced/build
+﻿
+**Демо**: https://adolshin.github.io/7wings/build
 
 
 
