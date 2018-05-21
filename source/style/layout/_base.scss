@@ -3,7 +3,6 @@
 *::after {
   box-sizing: border-box;
   user-select: none;
-
 }
 
 h1,
@@ -31,10 +30,13 @@ p {
 input {
   border: none;
   outline: none;
+
 }
+
 label {
   display: block;
 }
+
 textarea {
   border: none;
   display: block;
@@ -42,22 +44,10 @@ textarea {
   outline: none;
   -moz-appearance: none;
   resize: none;
-}
-::-webkit-input-placeholder {
-  color: #dc7f7f;
-  font-style: italic;
-
+ 
 }
 
-::-moz-placeholder {
-  color: #dc7f7f;
-  font-style: italic;
-}
 
-:-ms-input-placeholder {
-  color: #dc7f7f;
-  font-style: italic;
-}
 
 svg,
 a {
@@ -68,6 +58,7 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
 button {
   border: none;
   display: block;

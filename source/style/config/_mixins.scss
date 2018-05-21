@@ -41,6 +41,10 @@
   align-items: center;
 }
 
+// @mixin title {
+//   @include bernier_regularregular;
+//   font-size: rem(63px);
+// }
 
 %clearfix {
   &:before,
@@ -53,15 +57,20 @@
   }
 }
 
-.hide {
-  display: none!important; // for js
-}
+// .hide {
+//   display: none!important; // for js
+// }
 
 //responsive
 @function rem($px) {
   @return $px / 16px+0rem;
 }
 
+@mixin big {
+  @media screen and (max-width: 1400px) {
+    @content;
+  }
+}
 
 @mixin desktop {
   @media screen and (max-width: 1200px) {
@@ -91,5 +100,29 @@
   @media screen and (max-width: 400px) {
     @content;
   }
+}
+
+@mixin RobotoRegular {
+  font-family: 'RobotoCondensed-Regular';
+}
+
+@mixin RobotoBold {
+  font-family: 'RobotoCondensed-Bold';
+}
+
+@mixin RobotoLight {
+  font-family: 'RobotoCondensed-Light';
+}
+
+@mixin BebasBold {
+  font-family: 'BebasNeueBold';
+}
+
+@mixin BebasBook {
+  font-family: 'BebasNeueBook';
+}
+
+@mixin BebasRegular {
+  font-family: 'BebasNeueRegular';
 }
 

@@ -1,0 +1,26 @@
+.rating
+    .rating__title Вы набрали #[span 4500] балансовых баллов
+    .rating__subtitle для дальнейшего участия и получения призов, вам необходимо предоставить следующие данные
+    form.rating__form(action="")
+        .rating__form-title Паспортные данные
+        .rating__row            
+            input.rating__input(type="text" placeholder='Серия')
+            input.rating__input(type="text" placeholder='Номер')
+        .rating__row            
+            input.rating__input(type="text" placeholder='Кем выдан')
+            input.rating__input(type="text" placeholder='Дата выдачи')
+        .rating__row            
+            input.rating__input(type="text" placeholder='Код подразделения')
+            input.rating__input(type="text" placeholder='Адрес регистрации')
+        .rating__row            
+            label.rating__label(for="pass")
+                input.ratig__load-pass(type="file")
+                .rating__label__text Скан/Фото паспорта
+                .rating__label__button Загрузить 
+            label.rating__label(for="pass")
+                input.ratig__load-inn(type="file")
+                .rating__label__text Скан/Фото ИНН
+                .rating__label__button Загрузить 
+        button.rating__button(type='submit') Загрузить
+    a.rating__cross(href="#")
+        img.rating__cross-pic(src="./assets/img/cross.png", alt="закрыть")

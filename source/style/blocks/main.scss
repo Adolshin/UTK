@@ -1,0 +1,109 @@
+.main {
+    background-image: url('../img/background.png');
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;    
+}
+
+.content {
+    flex-grow: 1;
+}
+
+.stage {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 3; // width: 90%;
+    margin: 0 rem(50px) rem(20px) rem(50px);
+}
+
+.stage__phase {
+    width: 100%;
+    font-size: rem(38px);
+    color: #888888;
+    display: flex;
+    &:last-child {
+        width: 20%;
+    }
+    &.stage__phase-complete {
+        color: #fff;
+        .stage__phase-round {
+            background: -webkit-linear-gradient(27deg, #2ebe00 3%, #29ad00 97%);
+            background: -moz-linear-gradient(27deg, #2ebe00 3%, #29ad00 97%);
+            background: -o-linear-gradient(27deg, #2ebe00 3%, #29ad00 97%);
+            background: -ms-linear-gradient(27deg, #2ebe00 3%, #29ad00 97%);
+            background: linear-gradient(63deg, #2ebe00 3%, #29ad00 97%);
+            border: rem(2px) solid #00da5a;
+        }
+        .points__item {
+            background-color: #2ebe00;
+            border: rem(2px) solid #00da5a;
+        }
+    }
+    &.stage__phase-active {
+        flex-shrink: .94;
+        .stage__phase-round {
+            @include circle(rem(110px),
+            #fff);
+            @include BebasBold;
+            color: #0c2d6a;
+            background: #0d2d68;
+            position: relative;
+            &:after {
+                content: "1/16";
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                @include BebasBold;
+            }
+        }
+    }
+}
+
+.stage__phase-round {
+    @include BebasBook;
+    @include center;
+    @include circle(rem(66px),
+    #fff);
+    background: -webkit-linear-gradient(27deg, #f2f2f2 3%, #d4d4d4 97%);
+    background: -moz-linear-gradient(27deg, #f2f2f2 3%, #d4d4d4 97%);
+    background: -o-linear-gradient(27deg, #f2f2f2 3%, #d4d4d4 97%);
+    background: -ms-linear-gradient(27deg, #f2f2f2 3%, #d4d4d4 97%);
+    background: linear-gradient(63deg, #f2f2f2 3%, #d4d4d4 97%);
+    position: relative;
+    flex-shrink: 0;
+}
+
+.stage__phase-ball {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: rem(100px);
+    max-height: rem(100px);
+}
+
+.points {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.points__item {
+    @include circle(rem(10px),
+    #b2b2b2);
+}
+
+.stage__phase-cup {
+    max-width: rem(92px);
+    max-height: rem(134px);
+    position: absolute;
+    bottom: rem(20px);
+    left: rem(-10px);
+}

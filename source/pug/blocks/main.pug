@@ -1,0 +1,81 @@
+main.main
+  .container.container_main
+    .content
+      .content__left
+        .content__title кубок<br>акзо нобель
+        ul.content__buttons
+          li.content__buttons-item
+            a.content__link.content__link_learn(href="#") Пройти обучение
+            .content__line.content__line_learn
+              .line1
+              .line2           
+          li.content__buttons-item  
+            a.content__link.content__link_interview(href="#") Пройти опрос
+            .content__line.content__line_interview
+              .line1
+              .line2 
+          li.content__buttons-item  
+            a.content__link.content__link_buy(href="#") Регистрация покупок
+            .content__line.content__line_buy
+              .line1
+              .line2
+      .content__right
+        .content__user
+          .content__name анатолий ильин
+          ul.content__skills
+            li.content__skills-item
+              .content__skills-title тактика
+              .content__skills-value
+                .content__skills-value-tactic#tactic 100%
+                .content__skills-popup 2 теста. 300 игровых баллов
+            li.content__skills-item
+              .content__skills-title техника
+              .content__skills-value
+                .content__skills-value-tech 50%
+            li.content__skills-item
+              .content__skills-title удар
+              .content__skills-value
+                .content__skills-value-shoot 70%
+          img.content__pic(src="./assets/img/oval.png", alt="")                 
+  ul.stage
+    li.stage__phase.stage__phase-complete
+      .stage__phase-round 1/32
+      ul.points
+        li.points__item
+        li.points__item
+        li.points__item
+        li.points__item
+    li.stage__phase.stage__phase-active
+      .stage__phase-round 1/16
+        img.stage__phase-ball(src="./assets/img/ball.png", alt="мяч")
+      ul.points
+        li.points__item
+        li.points__item
+        li.points__item
+        li.points__item        
+    li.stage__phase
+      .stage__phase-round 1/8
+      ul.points
+        li.points__item
+        li.points__item
+        li.points__item
+        li.points__item
+    li.stage__phase
+      .stage__phase-round 1/4
+      ul.points
+        li.points__item
+        li.points__item
+        li.points__item
+        li.points__item
+    li.stage__phase
+      .stage__phase-round 1/2
+      ul.points
+        li.points__item
+        li.points__item
+        li.points__item
+        li.points__item
+    li.stage__phase
+      .stage__phase-round.stage__phase-round_final
+        img.stage__phase-cup(src="./assets/img/cup.png", alt="кубок")
+  img.player(src="./assets/img/player.png", alt="игрок")     
+

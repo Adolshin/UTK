@@ -1,18 +1,16 @@
 extends ../_template
 block variables
-  - var title = 'Каталог'
+  - var title = 'Personal'
 block content
-  .wrapper.page
-    .page__header    
-      include ../blocks/header
-    main.page__main      
-        +nav('menu','main', pages, 1)
-        include ../blocks/slider
-        include ../blocks/breadcrumbs
-        include ../blocks/content        
-    .page__footer
-      include ../blocks/footer
+  .wrapper
+    include ../blocks/header
+    include ../blocks/main        
+    include ../blocks/footer     
+    .overlay__left
+    .overlay__right
     include ../blocks/feedback
+    include ../blocks/rating
+    
     
   
      

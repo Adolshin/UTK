@@ -1,0 +1,276 @@
+.content {
+    display: flex;
+    margin-bottom: rem(70px);
+}
+
+.content__left {
+    width: 65%;
+}
+
+// .content__left {
+// }
+.content__title {
+    @include BebasBold;
+    font-size: rem(95px);
+    color: #113579;
+    text-transform: uppercase;
+    line-height: rem(86px);
+    margin-top: rem(60px);
+    margin-bottom: rem(35px);
+}
+
+.content__buttons {
+    width: 100%;
+}
+
+.content__buttons-item {
+    width: 100%;
+    margin-bottom: rem(30px);
+    display: flex;
+    align-items: center;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.content__line {
+    flex-grow: 1;
+    display: flex;
+    position: relative;
+    z-index: 2;
+    height: rem(50px);
+    bottom: rem(25px);
+    &.content__line_learn {
+        .line1,
+        .line2 {
+            border-color: #00da5a;
+        }
+    }
+    &.content__line_interview {
+        .line1,
+        .line2 {
+            border-color: #ff5000;
+        }
+    }
+    &.content__line_buy {
+        .line1,
+        .line2 {
+            border-color: #fcb400;
+        }
+    }
+}
+
+.line1 {
+    width: 35%;
+    height: 100%;
+    border-bottom: rem(3px) solid #fff;
+}
+
+.line2 {
+    width: 65%;
+    border-left: rem(3px) solid #fff;
+    border-top: rem(3px) solid #fff;
+    height: 100%;
+}
+
+.content__link {
+    width: rem(230px);
+    text-align: center;
+    padding: rem(10px) 0;
+    font-size: rem(22px);
+    color: #fff;
+    border-radius: rem(10px);
+    &.content__link_learn {
+        background: -webkit-linear-gradient(27deg, #2ebe00 31%, #29ad00 69%);
+        background: -moz-linear-gradient(27deg, #2ebe00 31%, #29ad00 69%);
+        background: -o-linear-gradient(27deg, #2ebe00 31%, #29ad00 69%);
+        background: -ms-linear-gradient(27deg, #2ebe00 31%, #29ad00 69%);
+        background: linear-gradient(63deg, #2ebe00 31%, #29ad00 69%);
+        border: rem(2px) solid #00da5a;
+        &:hover {
+            background: -webkit-linear-gradient(27deg, #b0e49e 31%, #29ad00 69%);
+            background: -moz-linear-gradient(27deg, #b0e49e 31%, #29ad00 69%);
+            background: -o-linear-gradient(27deg, #b0e49e 31%, #29ad00 69%);
+            background: -ms-linear-gradient(27deg, #b0e49e 31%, #29ad00 69%);
+            background: linear-gradient(63deg, #b0e49e 31%, #29ad00 69%);
+            transition: .7s;
+            color: #207c02;
+            border-color: #207c02;
+            font-weight: 700;
+        }
+    }
+    &.content__link_interview {
+        background: -webkit-linear-gradient(27deg, #ff4f00 31%, #ff6600 69%);
+        background: -moz-linear-gradient(27deg, #ff4f00 31%, #ff6600 69%);
+        background: -o-linear-gradient(27deg, #ff4f00 31%, #ff6600 69%);
+        background: -ms-linear-gradient(27deg, #ff4f00 31%, #ff6600 69%);
+        background: linear-gradient(63deg, #ff4f00 31%, #ff6600 69%);
+        border: rem(2px) solid #ff5000;
+        &:hover {
+            background: -webkit-linear-gradient(27deg, #ff4f00 31%, #ff6600 69%);
+            background: -moz-linear-gradient(27deg, #ff4f00 31%, #ff6600 69%);
+            background: -o-linear-gradient(27deg, #ff4f00 31%, #ff6600 69%);
+            background: -ms-linear-gradient(27deg, #ff4f00 31%, #ff6600 69%);
+            background: linear-gradient(63deg, #f3b79b 31%, #ff6600 69%);
+            color: #913a11;
+            font-weight: 700;
+            border-color: #913a11;
+            transition: .7s;
+        }
+    }
+    &.content__link_buy {
+        background: -webkit-linear-gradient(27deg, #ffa300 31%, #fcb400 69%);
+        background: -moz-linear-gradient(27deg, #ffa300 31%, #fcb400 69%);
+        background: -o-linear-gradient(27deg, #ffa300 31%, #fcb400 69%);
+        background: -ms-linear-gradient(27deg, #ffa300 31%, #fcb400 69%);
+        background: linear-gradient(63deg, #ffa300 31%, #fcb400 69%);
+        border: rem(2px) solid #fcb400;
+        &:hover {
+            background: -webkit-linear-gradient(27deg, #ffa300 31%, #fcb400 69%);
+            background: -moz-linear-gradient(27deg, #ffa300 31%, #fcb400 69%);
+            background: -o-linear-gradient(27deg, #ffa300 31%, #fcb400 69%);
+            background: -ms-linear-gradient(27deg, #ffa300 31%, #fcb400 69%);
+            background: linear-gradient(63deg, #f3d9ab 31%, #fcb400 69%);
+            color: #b17f02;
+            font-weight: 700;
+            border-color: #b17f02;
+            transition: .7s;
+        }
+    }
+}
+
+.content__right {
+    @include BebasBook;
+    color: #fff;
+}
+
+.content__user {
+    position: relative;
+    margin-top: rem(151px);
+    z-index: 1;
+}
+
+.content__pic {
+    position: absolute;
+    top: rem(-100px);
+    right: rem(-70px);
+    z-index: -1;
+    width: rem(508px);
+    height: rem(444px);
+}
+
+.content__name {
+    font-size: rem(48px);
+    line-height: rem(44px);
+    text-transform: uppercase;
+    margin-bottom: rem(15px);
+    white-space: nowrap;
+}
+
+.content__skills {
+    width: 100%;
+    font-size: rem(19px);
+    text-transform: uppercase;
+}
+
+.content__skills-item {
+    margin-bottom: rem(34px);
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+// .content__skills-title {}
+.content__skills-value {
+    text-align: right;
+    background-color: #b4cdff;
+    position: relative;
+    cursor: pointer;
+    &:hover {
+        .content__skills-popup {
+            left: 30%;            
+            opacity: 1;
+        }
+    }
+}
+
+.content__skills-popup {
+    text-transform: none;
+    white-space: nowrap;
+    position: absolute; // z-index: 30;
+    color: #103376;
+    border-radius: rem(5px);
+    border:rem(2px) solid #003b93;
+    background-color: #fff;
+    padding: rem(10px) rem(20px);
+    @include RobotoBold;
+    font-size: rem(20px); // box-shadow: -2px -2px 10px 0 #ccc;
+    left: -9999px;
+    top: rem(-55px);
+    opacity: 0;
+    transition: opacity 1s;
+    &:after {
+        position: absolute;
+        top: 99%;
+        left: rem(30px);
+        content: "";
+        width: 0;
+        height: 0;
+        border-top: rem(22px) solid #fff;
+        border-bottom: rem(22px) solid transparent;
+        border-right: rem(12px) solid transparent;
+        border-left: rem(12px) solid transparent;
+        z-index: 1; // box-shadow: -2px -2px 3px 0 #ccc;
+    }
+    &:before {
+        position: absolute;
+        top: 99%;
+        left: rem(26px);
+        content: "";
+        width: 0;
+        height: 0;
+        border-top: rem(26px) solid #003b93;
+        border-bottom: rem(26px) solid transparent;
+        border-right: rem(16px) solid transparent;
+        border-left: rem(16px) solid transparent;
+        
+    }
+}
+
+
+
+.content__skills-value-tactic {
+    animation: tactic 1s ease-out 1s forwards;
+    background: -webkit-linear-gradient(27deg, #2ebe00 41%, #29ad00 59%);
+    background: -moz-linear-gradient(27deg, #2ebe00 41%, #29ad00 59%);
+    background: -o-linear-gradient(27deg, #2ebe00 41%, #29ad00 59%);
+    background: -ms-linear-gradient(27deg, #2ebe00 41%, #29ad00 59%);
+    background: linear-gradient(63deg, #2ebe00 41%, #29ad00 59%);
+    border: rem(2px) solid #00da5a;
+    width: 0;
+    overflow: hidden;
+}
+
+.content__skills-value-tech {
+    width: 0;
+    animation: tech 1s ease-out 1s forwards;
+    background: -webkit-linear-gradient(27deg, #ff4f00 32%, #ff6600 68%);
+    background: -moz-linear-gradient(27deg, #ff4f00 32%, #ff6600 68%);
+    background: -o-linear-gradient(27deg, #ff4f00 32%, #ff6600 68%);
+    background: -ms-linear-gradient(27deg, #ff4f00 32%, #ff6600 68%);
+    background: linear-gradient(63deg, #ff4f00 32%, #ff6600 68%);
+    border: rem(2px) solid #ff5000;
+    overflow: hidden;
+}
+
+.content__skills-value-shoot {
+    width: 0;
+    animation: shoot 1s ease-out 1s forwards;
+    border: rem(2px) solid #fcb400;
+    background: -webkit-linear-gradient(27deg, #ffa300 37%, #fcb400 63%);
+    background: -moz-linear-gradient(27deg, #ffa300 37%, #fcb400 63%);
+    background: -o-linear-gradient(27deg, #ffa300 37%, #fcb400 63%);
+    background: -ms-linear-gradient(27deg, #ffa300 37%, #fcb400 63%);
+    background: linear-gradient(63deg, #ffa300 37%, #fcb400 63%);
+    overflow: hidden;
+}

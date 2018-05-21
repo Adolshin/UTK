@@ -1,12 +1,23 @@
 header.header
   .container.container_header
     a.header__logo(href="#")
-      img.header__logo-img(src='./assets/img/logo.png' alt='Лого')
-    .header__contacts
-      ul.header__contacts-list
-        li.header__contacts-item
-          a.header__phones(href='tel:+74997777777') +7(499)777-77-77
-        li.header__contacts-item
-          a.header__phones(href='tel:+74997777777') +7(499)777-77-77
-      a.header__feedback(href="#") Обратная связь
+      img.header__logo-img(src='./assets/img/AkzoNobel.png' alt='Лого')
+    ul.header__list
+      li.header__item
+        a.header__link.header__link_rating(href='#') Рейтинг
+      li.header__item
+        a.header__link(href='#') Получить приз
+      li.header__item
+        a.header__link.header__link_feedback(href='#') Обратная связь
+    .header__pers
+      .header__user
+        img.header__user-pic(src="./assets/img/user.png", alt="фото")
+        .header__user-name Анатолий<br>Ильин
+      .header__score
+        .header__score-game Игровой счет 6450 баллов
+        .header__score-bal Балансовый счет 4680 баллов
+      .header__exit
+        img.header__exit-pic(src="./assets/img/exit.png", alt="Выход") 
+
+      
            
