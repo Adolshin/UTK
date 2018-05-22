@@ -67,7 +67,7 @@
 }
 
 @mixin big {
-  @media screen and (max-width: 1400px) {
+  @media screen and (min-width: 2400px) {
     @content;
   }
 }
