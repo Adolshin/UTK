@@ -6,7 +6,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    position: relative;    
+    position: relative; // z-index: -2;    
 }
 
 .content {
@@ -14,12 +14,19 @@
 }
 
 .stage {
+    position: absolute;
+    bottom: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: relative;
+    right: rem(50px);
+    left: rem(50px);
     z-index: 3; // width: 90%;
-    margin: 0 rem(50px) rem(20px) rem(50px);
+    margin-bottom: rem(20px);
+    @include phones {
+        right: rem(20px);
+        left: rem(20px); 
+    }
 }
 
 .stage__phase {
@@ -46,7 +53,7 @@
         }
     }
     &.stage__phase-active {
-        flex-shrink: .94;
+        flex-shrink: .92;
         .stage__phase-round {
             @include circle(rem(110px),
             #fff);
@@ -58,8 +65,37 @@
                 content: "1/16";
                 position: absolute;
                 left: 50%;
-                transform: translateX(-50%);
+                top:50%;
+                transform: translate(-50%, -50%);
                 @include BebasBold;
+            }
+        }
+    }
+    @include tablets {
+        font-size: rem(28px);
+        .stage__phase-round {
+            @include circle(rem(46px),
+            #fff);
+        }
+        &.stage__phase-active {
+            .stage__phase-round {
+                @include circle(rem(86px),
+                #0d2d68);
+                background: #0d2d68;
+            }
+        }
+    }
+    @include phones {
+        font-size: rem(22px);
+        .stage__phase-round {
+            @include circle(rem(36px),
+            #fff);
+        }
+        &.stage__phase-active {
+            .stage__phase-round {
+                @include circle(rem(66px),
+                #0d2d68);
+                background: #0d2d68;
             }
         }
     }
@@ -81,11 +117,23 @@
 
 .stage__phase-ball {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 4%;
+    left: 4%;
+    // transform: translate(-50%, -50%);
     max-width: rem(100px);
     max-height: rem(100px);
+    -webkit-animation: rotate 12s ease-out infinite;
+    -moz-animation: rotate 12s ease-out infinite;
+    animation: rotate 12s ease-out infinite;
+    animation-delay: 7s;
+    @include tablets {
+        max-width: rem(80px);
+        max-height: rem(80px);
+    }
+    @include phones {
+        max-width: rem(60px);
+        max-height: rem(60px);
+    }
 }
 
 .points {
@@ -93,6 +141,18 @@
     justify-content: space-around;
     align-items: center;
     flex-grow: 1;
+    @include tablets {
+        .points__item {
+            @include circle(rem(6px),
+            #b2b2b2);
+        }
+    }
+    @include phones {
+        .points__item {
+            @include circle(rem(4px),
+            #b2b2b2);
+        }
+    }
 }
 
 .points__item {
@@ -106,4 +166,12 @@
     position: absolute;
     bottom: rem(20px);
     left: rem(-10px);
+    @include tablets {
+        max-width: rem(70px);
+        bottom: rem(15px);
+    }
+    @include phones {
+        max-width: rem(60px);
+        bottom: rem(10px);
+    }
 }

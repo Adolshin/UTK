@@ -1,11 +1,18 @@
-// $('.hamburger-menu').click(function () {
-//     $(this).toggleClass('hamburger-menu_active');
-//     $('.overlay').toggleClass('overlay_open');
-//     $('body').toggleClass('body_block');
-//     $('.overlay__left').toggleClass('left');
-//     $('.overlay__right').toggleClass('right');
+$('.hamburger-menu').click(function () {
+    $(this).toggleClass('hamburger-menu_active');
+    $('.header__list').toggleClass('header__list_active');
+});
+function myFunction() {
+    if ($(window).width() > 760) {
+        $('.header__list').removeClass('header__list_active');
+        $('.hamburger-menu').removeClass('hamburger-menu_active');
+    } 
+}
+myFunction();
+$(window).resize(function() {
+    myFunction();
+});
 
-// });
 $('.header__link_feedback').click(function (e) {
     e.preventDefault();
     // $(this).toggleClass('hamburger-menu_active');

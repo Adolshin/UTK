@@ -2,7 +2,11 @@ main.main
   .container.container_main
     .content
       .content__left
-        .content__title кубок<br>акзо нобель
+        .content__title
+          .content__title-row кубок
+          .content__title-block
+            .content__title-row акзо
+            .content__title-row нобель
         ul.content__buttons
           li.content__buttons-item
             a.content__link.content__link_learn(href="#") Пройти обучение
@@ -36,7 +40,8 @@ main.main
               .content__skills-title удар
               .content__skills-value
                 .content__skills-value-shoot 70%
-          img.content__pic(src="./assets/img/oval.png", alt="")                 
+          img.content__pic(src="./assets/img/oval.png", alt="")
+    img.player(src="./assets/img/player.png", alt="игрок")                  
   ul.stage
     li.stage__phase.stage__phase-complete
       .stage__phase-round 1/32
@@ -46,7 +51,7 @@ main.main
         li.points__item
         li.points__item
     li.stage__phase.stage__phase-active
-      .stage__phase-round 1/16
+      .stage__phase-round
         img.stage__phase-ball(src="./assets/img/ball.png", alt="мяч")
       ul.points
         li.points__item
@@ -77,5 +82,5 @@ main.main
     li.stage__phase
       .stage__phase-round.stage__phase-round_final
         img.stage__phase-cup(src="./assets/img/cup.png", alt="кубок")
-  img.player(src="./assets/img/player.png", alt="игрок")     
+        
 

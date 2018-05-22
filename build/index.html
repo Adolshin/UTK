@@ -21,7 +21,10 @@
             <li class="header__item"><a class="header__link header__link_rating" href="#">Рейтинг</a></li>
             <li class="header__item"><a class="header__link" href="#">Получить приз</a></li>
             <li class="header__item"><a class="header__link header__link_feedback" href="#">Обратная связь</a></li>
-          </ul>
+          </ul><a class="hamburger-menu" href="#">
+            <div class="hamburger-menu__item hamburger-menu__item_top"></div>
+            <div class="hamburger-menu__item hamburger-menu__item_middle"></div>
+            <div class="hamburger-menu__item hamburger-menu__item_bottom"></div></a>
           <div class="header__pers">
             <div class="header__user"><img class="header__user-pic" src="./assets/img/user.png" alt="фото">
               <div class="header__user-name">Анатолий<br>Ильин</div>
@@ -38,7 +41,13 @@
         <div class="container container_main">
           <div class="content">
             <div class="content__left">
-              <div class="content__title">кубок<br>акзо нобель</div>
+              <div class="content__title">
+                <div class="content__title-row">кубок</div>
+                <div class="content__title-block">
+                  <div class="content__title-row">акзо</div>
+                  <div class="content__title-row">нобель</div>
+                </div>
+              </div>
               <ul class="content__buttons">
                 <li class="content__buttons-item"><a class="content__link content__link_learn" href="#">Пройти обучение</a>
                   <div class="content__line content__line_learn">
@@ -86,7 +95,7 @@
                 </ul><img class="content__pic" src="./assets/img/oval.png" alt="">
               </div>
             </div>
-          </div>
+          </div><img class="player" src="./assets/img/player.png" alt="игрок">
         </div>
         <ul class="stage">
           <li class="stage__phase stage__phase-complete">
@@ -99,7 +108,7 @@
             </ul>
           </li>
           <li class="stage__phase stage__phase-active">
-            <div class="stage__phase-round">1/16<img class="stage__phase-ball" src="./assets/img/ball.png" alt="мяч"></div>
+            <div class="stage__phase-round"><img class="stage__phase-ball" src="./assets/img/ball.png" alt="мяч"></div>
             <ul class="points">
               <li class="points__item"></li>
               <li class="points__item"></li>
@@ -137,7 +146,7 @@
           <li class="stage__phase">
             <div class="stage__phase-round stage__phase-round_final"><img class="stage__phase-cup" src="./assets/img/cup.png" alt="кубок"></div>
           </li>
-        </ul><img class="player" src="./assets/img/player.png" alt="игрок">
+        </ul>
       </main>
       <footer class="footer">
         <div class="container container_footer">

@@ -46,11 +46,26 @@ textarea {
   resize: none;
  
 }
+::-webkit-input-placeholder {
+  color: #949496;
+  @include RobotoLight;
+  font-size: rem(24px);
+}
 
+::-moz-placeholder {
+  color: #949496;
+  @include RobotoLight;
+  font-size: rem(24px);
+}
 
+:-ms-input-placeholder {
+  color: #949496;
+  @include RobotoLight;
+  font-size: rem(24px);
+}
 
 svg,
-a {
+a, img {
   display: block;
 }
 
@@ -65,16 +80,7 @@ button {
   padding: 0;
 }
 
-.bx-wrapper {
-  margin-bottom: 0;
-  box-shadow: none;
-  border: none;
-  background: none;
-}
 
-.bx-viewport {
-  height: auto !important;
-}
 
 .visuallyhidden {
   position: absolute;

@@ -83,6 +83,11 @@
     @content;
   }
 }
+@mixin laptoprev {
+  @media screen and (min-width: 992px) {
+    @content;
+  }
+}
 
 @mixin tablets {
   @media screen and (max-width: 768px) {
@@ -97,7 +102,7 @@
 }
 
 @mixin mini {
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 320px) {
     @content;
   }
 }

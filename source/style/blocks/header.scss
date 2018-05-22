@@ -7,37 +7,84 @@
     background: linear-gradient(90deg, #0c2a63 0%, #11367d 100%);
     color: #fff;
     padding: rem(10px) 0;
+    position: relative;
 }
 
 .header__logo {
     max-width: rem(200px);
     max-height: rem(50px);
     @include center;
-    margin-right: rem(30px);
+    margin-right: rem(20px);
     flex-shrink: 0;
+    @include phones {
+        margin-right: 0;
+        max-width: rem(150px);
+    }
 }
 
 .header__logo-img {
-    max-width: 100%;
+    width: 100%;
     max-height: 100%;
 }
 
 .header__list {
     display: flex;
     flex-grow: 1;
-    justify-content: space-around;
+    justify-content: center;
     margin-right: rem(20px);
+    transition: transform .5s;
+    @include tablets {
+        position: absolute;
+        left: -9999px;
+        transform: translateY(-200%);
+    }
+    &.header__list_active {
+        flex-direction: column;
+        align-items: center;
+        top: 110%;
+        left: rem(190px);
+        z-index: 5;
+        margin-right: 0;
+        padding: rem(20px);
+        background: -webkit-linear-gradient(0deg, #0c2a63 0%, #11367d 100%);
+        background: -moz-linear-gradient(0deg, #0c2a63 0%, #11367d 100%);
+        background: -o-linear-gradient(0deg, #0c2a63 0%, #11367d 100%);
+        background: -ms-linear-gradient(0deg, #0c2a63 0%, #11367d 100%);
+        background: linear-gradient(90deg, #0c2a63 0%, #11367d 100%);
+        list-style: none;
+        border-radius: rem(10px);
+        transform: translateY(0);
+        transition: transform .5s;
+        .header__item {
+            margin-right: 0;
+            margin-bottom: rem(20px);
+            &:last-child {
+                margin-bottom: 0;
+            }
+            font-size: rem(24px);
+        }
+        // @include laptoprev {
+        //     flex-direction: row;
+        //     position: static;
+        // }
+        @include phones {
+            left: rem(105px); 
+        }
+    }
 }
 
 .header__item {
-    margin-right: rem(10px);
+    margin-right: rem(40px);
     font-size: rem(20px); // white-space: nowrap;
     &:last-child {
         margin-right: 0;
     }
+    @include desktop {
+        margin-right: rem(15px);
+    }
 }
 
-.header__link {    
+.header__link {
     white-space: nowrap;
     position: relative;
     &:after {
@@ -62,6 +109,9 @@
 .header__pers {
     display: flex;
     align-items: center;
+    @include phones {
+        margin-left: rem(20px);
+    }
 }
 
 .header__user {
@@ -69,6 +119,9 @@
     margin-right: rem(30px);
     align-items: center;
     font-size: rem(14px);
+    @include desktop {
+        margin-right: rem(20px);
+    }
 }
 
 .header__user-pic {
@@ -78,13 +131,83 @@
 }
 
 .header__score {
+    white-space: nowrap;
     margin-right: rem(30px);
     font-size: rem(14px);
     @include RobotoRegular;
+    @include desktop {
+        margin-right: rem(20px);
+    }
+    @include laptop {
+        position: absolute;
+        display: flex;
+        top: 100%;
+        right: 0;
+        margin-right: rem(30px);
+        z-index: 1;
+        color: #113579;
+        @include RobotoBold;
+    }
+    @include tablets {
+        font-size: rem(16px);
+    }
 }
+
+.header__score-game {
+    @include desktop {
+        margin-right: rem(10px);
+    }
+}
+
 .header__exit {
     cursor: pointer;
+    transition: .3s;
     &:hover {
         transform: scale(1.1);
+    }
+}
+
+.hamburger-menu {
+    display: none;
+    z-index: 2;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: rem(20px);
+    margin-right: auto;
+    height: 22px;
+    width: 24px;
+    cursor: pointer;
+    &.hamburger-menu_active {
+        .hamburger-menu__item {
+            &.hamburger-menu__item_top {
+                transform: translateY(225%) translateX(0) rotate(45deg);
+                border-radius: 4px;
+            }
+            &.hamburger-menu__item_middle {
+                width: 0;
+            }
+            &.hamburger-menu__item_bottom {
+                transform: translateY(-225%) translateX(0) rotate(-45deg);
+                border-radius: 4px;
+            }
+        }
+    }
+    .hamburger-menu__item {
+        background: #fff; // opacity: .5;
+        border: none;
+        border-radius: 4px;
+        height: 4px;
+        width: 24px;
+        transition: .3s;
+    }
+    &:hover {
+        .hamburger-menu__item {
+            transform: scale(1.2);
+        }
+    }
+    @include tablets {
+        display: flex;
     }
 }

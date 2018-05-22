@@ -1,10 +1,14 @@
 .content {
     display: flex;
-    margin-bottom: rem(70px);
+    margin-bottom: rem(200px);
 }
 
 .content__left {
     width: 65%;
+    transition: .5s;
+    @include desktop {
+        width: 70%;
+    }
 }
 
 // .content__left {
@@ -17,14 +21,41 @@
     line-height: rem(86px);
     margin-top: rem(60px);
     margin-bottom: rem(35px);
+    position: relative;
+    z-index: 3;
+    -webkit-animation: neon 1.5s ease-in-out infinite alternate;
+    -moz-animation: neon 1.5s ease-in-out infinite alternate;
+    animation: neon 1.5s ease-in-out infinite alternate;
+    @include tablets {
+        font-size: rem(75px);
+        line-height: rem(66px);
+    }
+    @include phones {
+        margin-top: rem(25px);
+        margin-bottom: rem(15px);
+    }
+}
+
+.content__title-block {
+    display: flex;
+    @include phones {
+        flex-direction: column;
+    }
+}
+
+.content__title-row {
+    margin-right: rem(10px);
 }
 
 .content__buttons {
     width: 100%;
+    position: relative;
+    z-index: 3;
 }
 
 .content__buttons-item {
     width: 100%;
+    height: rem(50px);
     margin-bottom: rem(30px);
     display: flex;
     align-items: center;
@@ -57,6 +88,10 @@
         .line2 {
             border-color: #fcb400;
         }
+    }
+    @include phones {
+        height: rem(62px);
+        bottom: rem(31px);
     }
 }
 
@@ -137,6 +172,10 @@
             transition: .7s;
         }
     }
+    @include tablets {
+        width: rem(180px);
+        font-size: rem(18px);
+    }
 }
 
 .content__right {
@@ -148,6 +187,9 @@
     position: relative;
     margin-top: rem(151px);
     z-index: 1;
+    @include tablets {
+        margin-top: rem(125px);
+    }
 }
 
 .content__pic {
@@ -157,6 +199,12 @@
     z-index: -1;
     width: rem(508px);
     height: rem(444px);
+    @include tablets {
+        width: rem(418px);
+        height: rem(384px);
+        top: rem(-80px);
+        right: rem(-70px);
+    }
 }
 
 .content__name {
@@ -165,6 +213,18 @@
     text-transform: uppercase;
     margin-bottom: rem(15px);
     white-space: nowrap;
+    @include tablets {
+        font-size: rem(38px);
+        line-height: rem(34px);
+        margin-bottom: rem(10px);
+    }
+    @include phones {
+        font-size: rem(32px);
+        line-height: rem(30px);
+    }
+    @include mini {
+        margin-bottom: rem(15px);
+    }
 }
 
 .content__skills {
@@ -178,6 +238,15 @@
     &:last-child {
         margin-bottom: 0;
     }
+    @include desktop {
+        margin-bottom: rem(36px);
+    }
+    @include phones {
+        margin-bottom: rem(33px);
+    }
+    @include mini {
+        margin-bottom: rem(35px);
+    }
 }
 
 // .content__skills-title {}
@@ -188,7 +257,7 @@
     cursor: pointer;
     &:hover {
         .content__skills-popup {
-            left: 30%;            
+            left: 30%;
             opacity: 1;
         }
     }
@@ -200,7 +269,7 @@
     position: absolute; // z-index: 30;
     color: #103376;
     border-radius: rem(5px);
-    border:rem(2px) solid #003b93;
+    border: rem(2px) solid #003b93;
     background-color: #fff;
     padding: rem(10px) rem(20px);
     @include RobotoBold;
@@ -233,11 +302,8 @@
         border-bottom: rem(26px) solid transparent;
         border-right: rem(16px) solid transparent;
         border-left: rem(16px) solid transparent;
-        
     }
 }
-
-
 
 .content__skills-value-tactic {
     animation: tactic 1s ease-out 1s forwards;
