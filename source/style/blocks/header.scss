@@ -128,6 +128,7 @@
     width: rem(50px);
     height: rem(50px);
     margin-right: rem(15px);
+    flex-shrink: 0;
 }
 
 .header__score {

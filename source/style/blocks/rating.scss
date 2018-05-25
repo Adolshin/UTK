@@ -1,7 +1,7 @@
 .rating {
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 55%;
     transform: translate(-50%, -50%) scale(0);
     z-index: 11;
     width: rem(740px);
@@ -12,7 +12,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: rem(8px); // transition-delay: .5s;
+    border-radius: rem(8px); 
     transition: .5s;
     span {
         font-size: rem(65px);
@@ -29,7 +29,7 @@
 .rating__title {
     text-transform: uppercase;
     @include BebasRegular;
-    font-size: rem(40px); // margin-bottom: rem(15px);
+    font-size: rem(40px); 
     color: #fff;
     text-align: center;
 }

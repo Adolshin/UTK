@@ -1,16 +1,13 @@
 html,
 body {
   width: 100%;
-  height: 100%;
-  min-width: 320px;
-  min-height: 740px;
-  
+  height: 100%; // min-width: 320px; 
 }
 
 html {
   font-size: 16px;
   @include big {
-    font-size: 38px;
+    font-size: 26px;
   }
   @include desktop {
     font-size: 15px;
@@ -27,14 +24,12 @@ html {
   @include mini {
     font-size: 11px;
   }
-  transition: .5s;
 }
 
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   @include RobotoLight;
-  // font-size: rem(14px);
 }
 
 .body_block {
@@ -43,12 +38,13 @@ body {
 
 .wrapper {
   width: 100%;
-  overflow: hidden;
   position: relative;
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;
   min-width: 320px;
-  min-height: 100%; // height: 100%;
+  height: 100%;
+  
+
 }
 
 .container {
@@ -81,14 +77,17 @@ body {
 .footer,
   {
   width: 100%;
+  flex-shrink: 0;
 }
 
-.main {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  flex-grow: 1;
-}
+// .main {
+//   display: flex;
+//   flex-direction: column;
+//   width: 100%;
+//   flex-grow: 1;
+//   flex-shrink: 0;
+//   overflow: hidden;
+// }
 
 .player {
   position: absolute;
@@ -119,6 +118,21 @@ body {
   &.overlay__left_open {
     right: 50%;
     transition: .5s;
+  }
+}
+
+.overlay {  
+  position: absolute;
+  top: 0;
+  bottom: 100%;
+  right: 0;
+  left: 0;
+  transition: .001s;
+  transition-delay: 1s;
+  overflow: hidden;
+  &.overlay_open {
+    bottom: 0;
+    transition: .001s;
   }
 }
 

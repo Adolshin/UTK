@@ -57,17 +57,16 @@
   }
 }
 
-// .hide {
-//   display: none!important; // for js
-// }
+
 
 //responsive
 @function rem($px) {
   @return $px / 16px+0rem;
 }
 
+
 @mixin big {
-  @media screen and (min-width: 2400px) {
+  @media screen and (min-width: 2500px) {
     @content;
   }
 }
@@ -80,11 +79,6 @@
 
 @mixin laptop {
   @media screen and (max-width: 992px) {
-    @content;
-  }
-}
-@mixin laptoprev {
-  @media screen and (min-width: 992px) {
     @content;
   }
 }
@@ -106,6 +100,7 @@
     @content;
   }
 }
+
 
 @mixin RobotoRegular {
   font-family: 'RobotoCondensed-Regular';
